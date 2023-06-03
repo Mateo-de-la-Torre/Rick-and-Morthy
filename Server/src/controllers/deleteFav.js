@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
 
         await Favorite.destroy({where: {id}});
 
-        const allFavorites = await findAll();
+        const allFavorites = await Favorite.findAll();
 
         return res.json(allFavorites);
 

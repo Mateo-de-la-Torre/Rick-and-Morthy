@@ -10,7 +10,7 @@ const router = require('express').Router();
 
 
 router.get('/login', login);
-router.get('/login', postUser);
+router.post('/login', postUser);
 router.post('/fav', postFav)
 router.delete('/fav/:id', deleteFav)
 router.get('/character/:id', getCharById)

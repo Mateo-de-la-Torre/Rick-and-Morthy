@@ -25,7 +25,7 @@ UserModel(sequelize)
 // ¡Relaciona tus modelos aquí abajo!
  const { User, Favorite } = sequelize.models;
  
- User.belongsToMany(Favorite, {through: 'user_favorite'});
+ User.belongsToMany(Favorite, {through: 'user_favorite'}); // crea una tabla intermedia (user_favorite) q relaciona las dos tablas q creamos
  Favorite.belongsToMany(User, {through: 'user_favorite'});
 
 
